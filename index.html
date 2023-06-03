@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Dream Events</title>
+  <style>
+    body {
+        font-family: 'Times New Roman', Times, serif, cursive;
+      margin: 0;
+      padding: 0;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: 100px; /* Adjust the width as needed */
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    header {
+      position: relative;
+    }
+
+    header img {
+      width: 100%;
+      height: 100%;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      text-align: end;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+}
+
+    nav ul li a:hover {
+      color: rgb(251, 249, 247);
+    }
+
+    nav ul li a.active {
+      color: blue;
+    }
+
+    h2 {
+      color: #000;
+      font-size: 30px;
+      text-align: center;
+    }
+    h3{
+        color: rgb(255, 128, 1);
+        font-size: 20px;
+    }
+    p{
+        color: black;
+        font-size: 20px;
+    }
+    p1{
+        color:black;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+
+    }
+ ul li a{
+        stroke: #000;
+        font-size: 20px;
+        color: black;
+    }
+    a{
+        color: #000;
+    }
+    label{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .service {
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    
+    .gallery img {
+      width: 200px;
+      height: 200px;
+    }
+
+    form {
+    display: flex;
+    flex-direction: row;
+   align-items: center;}
+   form label {
+    font-family: "Italianno", cursive;  display: block;
+   margin-bottom: 10px}
+   form input[type="date"
+   ],
+   form button {
+    
+   width: 200px;
+   padding: 10px;
+   margin-bottom: 20px;
+   border: 1px solid red;
+   border-radius: 15px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
+
+   form button {
+    padding: 10px;
+   background-color: #f80707;
+   color: #fff;
+   cursor: pointer;}
+
+
+    footer {
+      background-color: white;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .event-date-form {
+        border-radius: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      border: rgb(251, 85, 2);
+    }
+
+    .event-date-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      
+    }
+    .service-container {
+   display: flex;
+   overflow-x: auto;
+    }
+
+  .service {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  }
+
+  .service img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  }
+  footer {
+    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .footer-container {
+    border-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  }
+
+  .footer-section {
+  width: 350px; 
+  /* Adjust the width as needed */
+  }
+
+  .footer-bottom {
+  text-align: center;
+ }
+  /* styles.css */
+  .gallery {
+  display: flex;
+ }
+ .service{
+  padding: 20px;
+ }
+
+ .service-container {
+  background-color: whitesmoke;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000; /* Replace with your desired border style */
+  box-sizing: border-box;
+
+
+  }
+
+ .portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ }
+
+ .portfolio-item {
+
+  position: relative;
+ }
+
+ .portfolio-item img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+ }
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+ }
+
+ .overlay:hover {
+  opacity: 1;
+ }
+
+ .overlay h3, .overlay p {
+  margin: 0;
+  padding: 10px;
+ }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header id="home">
+    <link href="https://fonts.googleapis.com/css?family=Italianno&display=swap" rel="stylesheet">
+
+    <img src="assets/headerimagewithlogo.jpeg" alt="Header Image">
+<nav>
+  <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#portfolio">Gallery</a></li>
+  <li><a href="#contact">Contact Us</a></li>
+  </ul>
+</nav>
+  </header>
+  <section id="home">
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/sanjaulishimla.jpg" alt="Slide 1">
+          <div class="event-date-form">
+            
+            <h3>Event Date</h3>
+            <form>
+              <label for="event-date-from">From:</label>
+              <input type="date" id="event-date-from" name="event-date-from">
+              <label for="event-date-to">To:</label>
+              <input type="date" id="event-date-to" name="event-date-to">
+              <button type="submit" onclick="sendWhatsAppMessage()">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+    <section id="services">
+    <h2>Our Services</h2>
+    
+    <div class="service-container">
+      <div class="service">
+        <img src="assets/destinationweding.jpeg" alt="Service 1">
+        <h3>Destination Wedding</h3>
+      </div>
+    
+      <div class="service">
+        <img src="assets/charchshimla.jpg" alt="Service 2">
+        <h3>Venue booking</h3>
+      </div>
+    
+      <div class="service">
+        <img src="assets/corporate.jpg" alt="Service 3">
+        <h3>Corporate Events</h3>
+      </div>
+
+      <div class="service">
+        <img src="assets/gethering.jpg" alt="Service 1">
+        <h3>Soical Gatherings</h3>
+      </div>
+    
+      <div class="service">
+        <img src="assets/theme.jpg" alt="Service 2">
+        <h3>Wedding theme and decor</h3>
+       
+      </div>
+    
+      <div class="service">
+        <img src="assets/planningtheme.jpg" alt="Service 3">
+        <h3>Decoration and styling</h3>
+        
+      </div>
+      
+    </div>
+    
+   </section>
+  
+
+   <section id="portfolio">
+    <h2>Gallery</h2>
+    <div class="portfolio">
+      
+      <div class="portfolio-item">
+        <img src="assets/mydream/forest.jpeg" alt="Portfolio Item 2">
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/mydream/stagepink.jpeg" alt="Portfolio Item 2">
+          </div>
+          <div class="portfolio-item">
+            <img src="assets/mydream/ring.jpeg" alt="Portfolio Item 2">
+            </div>
+            <div class="portfolio-item">
+              <img src="assets/mydream/ringcerm.jpeg" alt="Portfolio Item 2">
+              </div>
+              <div class="portfolio-item">
+                <img src="assets/mydream/secondring.jpeg" alt="Portfolio Item 2">
+                </div>
+                <div class="portfolio-item">
+                  <img src="assets/mydream/stage.jpeg" alt="Portfolio Item 2">
+                  </div>
+                  <div class="portfolio-item">
+                    <img src="assets/mydream/stagepink.jpeg" alt="Portfolio Item 2">
+                    </div>
+                    <div class="portfolio-item">
+                      <img src="assets/mydream/forest2.jpeg" alt="Portfolio Item 2">
+                      </div>      
+      </div>
+      
+      
+      
+      <!-- Add more portfolio items as needed -->
+    </div>
+    
+  
+   </section>
+
+   <section id="contact">
+    <h2>Contact Us</h2>
+    
+   </section>
+
+   <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p> We specialize in creating unforgettable destination weddings and corporate events, meticulously planned to perfection. Contact us to turn your vision into reality.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Destination Weddings</a></li>
+          <li><a href="#">Corporate Events</a></li>
+          <li><a href="#">Social Gatherings</a></li>
+          <li><a href="#">Event Planning</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p1>Housing Bord Coloney Sanjauli Shimla 171006 Hp India</p1>
+        <p>
+        </p>
+
+        <p1>Phone: +918219559908    </p1>
+        <p></p>
+
+
+        <p1>Email: mydreameventsshimla@gmail.com</p1>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 My Dream Events. All rights reserved.</p>
+    </div>
+   </footer>
+  
+
+  <!-- Add the required scripts for Bootstrap and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+  <script>// Activate the carousel
+    $(document).ready(function() {
+      $('#carouselExample').carousel({
+        interval: 5000, // Slide duration of 5 seconds
+        pause: "hover" // Pause on hover
+      });
+    });
+    function sendWhatsAppMessage() {
+  // Get the input values
+  var fromDate = document.getElementById('event-date-from').value;
+  var toDate = document.getElementById('event-date-to').value;
+
+  // Construct the WhatsApp message
+  var message = "Hello, I hope this email finds you well. I would like to inquire about the availability of event dates from " + fromDate + " to " + toDate + ". Kindly provide me with the necessary information regarding venue availability and any associated costs. Thank you in advance for your assistance.";
+
+  // Construct the WhatsApp URL
+  var phoneNumber = "918219559908"; // Replace with your phone number
+  var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+  // Open the WhatsApp URL in a new tab/window
+  window.open(whatsappURL);
+}
+
+    
+  
+    
+
+    
+   
+     </script>
+</body>
+</html>

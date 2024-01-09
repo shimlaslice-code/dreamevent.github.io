@@ -47,7 +47,7 @@
 
 nav ul li a {
       text-decoration: none;
-      color: white;
+      color: rgb(255, 128, 1);
       font-size: 18px;
       font-weight: bold;
 }
@@ -237,6 +237,10 @@ nav ul li a {
   height: 400px;
   object-fit: cover;
  }
+ .portfolio-item:hover {
+   
+    background-color: #ccc;
+}
 
  .overlay {
   position: absolute;
@@ -262,6 +266,11 @@ nav ul li a {
   margin: 0;
   padding: 10px;
  }
+ /* ... (existing CSS code) ... */
+
+
+
+ 
 
 
 
@@ -347,6 +356,7 @@ nav ul li a {
   
 
    <section id="portfolio">
+    
     <h2>Gallery</h2>
     <div class="portfolio">
       
@@ -371,15 +381,19 @@ nav ul li a {
                   <div class="portfolio-item">
                     <img src="assets/mydream/stagepink.jpeg" alt="Portfolio Item 2">
                     </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/forest2.jpeg" alt="Portfolio Item 2">
-                      </div>      
+                    
+                  
+                         
       </div>
       
       
       
       <!-- Add more portfolio items as needed -->
     </div>
+    <a href="https://www.instagram.com/my_dream_event_s/" class="portfolio-item">
+      <h3>Click for More Images</h3>
+      
+    </a>
     
   
    </section>

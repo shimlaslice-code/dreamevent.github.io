@@ -1,763 +1,1276 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Dream Events</title>
-  <style>
-    body {
-        font-family: 'Times New Roman', Times, serif, cursive;
-      margin: 0;
-      padding: 0;
-    }
-    .logo {
-    width: 50px; /* Adjust the width of your logo */
-    height: auto;
-    margin-right: 20px; /* Adjust the margin as needed */
-    }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dream Events - Home</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      position: relative;
-      background-color: white; 
-      z-index: 1; /* Set a z-index value lower than the navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
+        a {
+            color: #ff4800;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-    }
+        a:hover {
+            color: #333;
+        }
 
-    header img {
-      width: 100%;
-      height: 100%;
-    }
+        header {
+            color: #070000;
+            padding: 10px 0;
+        }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 10px 20px; /* Adjust padding to create space for the logo */
-      background-color: white; /* Add this line to set the background color */
-      z-index: 1000; /* Set a high z-index value to bring the navigation bar to the front */
-      display: flex;
-      align-items: center; /* Align logo and navigation links vertically */
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        header .logo {
+            font-size: 2em;
+            font-family: 'Great Vibes', cursive;
+        }
 
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
 
+        nav ul li {
+            margin: 0 15px;
+        }
 
+        nav ul li a {
+            color: black;
+            font-size: 1.1em;
+            font-family: 'Dancing Script', cursive;
+        }
 
-    }
-    
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 10px;
-      text-align: end;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-nav ul li a {
-      text-decoration: none;
-      color: rgb(255, 128, 1);
-      font-size: 18px;
-      font-weight: bold;
+        .hero {
+          background: url('assets/Shimlaloongwood.jpg') no-repeat center center/cover;
+          height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Ensure positioning for the slideshow container */
 }
 
-    nav ul li a:hover {
-      color: rgb(243, 164, 86);
+.slideshow-container {
+    position: absolute; /* Position the slideshow within the hero section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.mySlides {
+    display: none; /* Hide all slides by default */
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the container while preserving aspect ratio */
+}
+
+
+
+
+
+
+
+
+       
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about, .services, .packages, .gallery, .testimonials, .contact {
+            background-color: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .about h2, .services h2, .packages h2, .gallery h2, .testimonials h2, .contact h2 {
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            color: #007bff;
+        }
+
+        .about p, .services p, .packages p, .gallery p, .testimonials p, .contact p {
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .services .service, .packages .package, .testimonials .testimonial {
+            margin-bottom: 40px;
+        }
+
+        .services .service, .packages .package {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .services .service img, .packages .package img {
+            max-width: 300px;
+            margin: 0 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .services .service .details, .packages .package .details {
+            max-width: 600px;
+        }
+
+        .testimonials .testimonial p {
+            font-style: italic;
+        }
+
+        .testimonials .testimonial .client {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact form .form-group input, .contact form .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact form .form-group textarea {
+            height: 150px;
+        }
+
+        .contact form .submit-btn {
+            background-color: #007bff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact form .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        /* Packages Section */
+.packages {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light background to distinguish section */
+    text-align: center;
+}
+
+.packages h2 {
+    font-size: 2.5em;
+    color: #ff4800; /* Accent color */
+    margin-bottom: 30px;
+    font-family: 'Great Vibes', cursive; /* Elegant heading font */
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background for each package */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.package-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.details {
+    max-width: 500px;
+}
+
+.details h3 {
+    font-size: 2em;
+    color: #ff4800; /* Accent color */
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive; /* Elegant heading font */
+}
+
+.details .price {
+    font-size: 1.5em;
+    color: #333; /* Darker text for contrast */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.details p {
+    font-size: 1.2em;
+    color: #555; /* Slightly lighter text */
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif; /* Elegant paragraph font */
+}
+
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 20px;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .footer-section p, .footer-section a, .footer-section ul {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ff4800;
+        }
+
+        .footer-section ul li a:hover {
+            color: #333;
+        }
+
+        .footer-section .contact p, .footer-section .contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-section .contact p i, .footer-section .contact a i {
+            margin-right: 10px;
+        }
+
+        .footer-section .social ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-section .social ul li {
+            margin: 0 10px;
+        }
+
+        .footer-section .social ul li a {
+            color: #ff4800;
+            font-size: 1.5em;
+        }
+
+        .footer-section .social ul li a:hover {
+            color: #333;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            color: #6c757d;
+        }
+
+        .footer-bottom a {
+            color: #ff4800;
+        }
+
+        .footer-bottom a:hover {
+            color: #333;
+        }
+        /* Footer Section - Contact */
+.footer-section.contact {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-top: 2px solid #ff4800; /* Accent color border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px 0; /* Spacing around the section */
+}
+
+.footer-section.contact h3 {
+    font-size: 1.8em;
+    color: #ff4800; /* Accent color */
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif; /* Elegant heading font */
+}
+
+.footer-section.contact p {
+    font-size: 1em;
+    color: #333; /* Darker text for readability */
+    line-height: 1.6;
+    margin: 10px 0;
+    font-family: 'Playfair Display', serif; /* Elegant paragraph font */
+}
+
+.footer-section.contact p i {
+    color: #ff4800; /* Accent color for icons */
+    margin-right: 10px;
+}
+
+.footer-section.contact a {
+    color: #ff4800; /* Accent color for links */
+    text-decoration: none;
+}
+
+.footer-section.contact a:hover {
+    text-decoration: underline;
+}
+
+        
+        /* Container for the entire section */
+        #services .container {
+    text-align: center;
+    padding: 40px 15px; /* Reduced padding */
+}
+
+/* Heading Styles */
+/* Services Section */
+#services .container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Heading Styles */
+#services h2 {
+    font-size: 2em; /* Reduced from 2.5em */
+    margin-bottom: 20px;
+    color: #ff5500;
+}
+
+#services p {
+    font-size: 1em; /* Reduced from 1.2em */
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Service Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Service Card */
+.service-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    height: 320px; /* Set a fixed height for the service card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Icon Styles */
+.service-card i {
+    font-size: 2.5em; /* Reduced from 3em */
+    color: #ff6a00;
+    margin-bottom: 15px;
+}
+
+/* Service Card Title */
+.service-card h3 {
+    font-size: 1.2em; /* Reduced from 1.5em */
+    color: #000000;
+    margin: 15px 0 10px 0;
+}
+
+/* Service Card Description */
+.service-card p {
+    font-size: 0.9em; /* Reduced from 1em */
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Centering content inside the service card */
+.service-card h3, .service-card p, .service-card i {
+    margin: 0 auto;
+}
+
+
+
+
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#testimonials h2 {
+    font-size: 2.5em;
+    color: #ff4800;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.client {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ff4800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #ff4800;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.contact-info h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #ff4800;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff4800;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #ff4800;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e04400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
     }
 
-    nav ul li a.active {
-      color: blue;
-    }
-
-    h2 {
-      color: #000;
-      font-size: 30px;
-      text-align: center;
-    }
-    h3{
-        color: rgb(255, 128, 1);
-        font-size: 20px;
-    }
-    p{
-        color: black;
-        font-size: 20px;
-    }
-    p1{
-        color:black;
-        font-size: 18px;
-        font-weight: 500;
-        text-align: center;
-
-    }
- ul li a{
-        stroke: #000;
-        font-size: 20px;
-        color: black;
-    }
-    a{
-        color: #000;
-    }
-    label{
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .service {
-      margin-bottom: 40px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-    
-    .gallery img {
-      width: 200px;
-      height: 200px;
+    .contact-info {
+        margin-bottom: 20px;
     }
 
     form {
-    display: flex;
-    flex-direction: row;
-   align-items: center;}
-   form label {
-    font-family: "Italianno", cursive;  display: block;
-   margin-bottom: 10px}
-   form input[type="date"
-   ],
-   form button {
-    
-   width: 200px;
-   padding: 10px;
-   margin-bottom: 20px;
-   border: 1px solid red;
-   border-radius: 15px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);}
-
-   form button {
-    padding: 10px;
-   background-color: #f80707;
-   color: #fff;
-   cursor: pointer;}
-
-
-    footer {
-      background-color: white;
-      padding: 20px;
-      color: #fff;
-      text-align: center;
+        width: 100%;
     }
-
-    .carousel-item img {
-      width: 100%;
-      height: auto;
-    }
-
-    .event-date-form {
-        border-radius: 25px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      text-align: center;
-      border: rgb(251, 85, 2);
-    }
-
-    .event-date-form input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      
-    }
-    .service-container {
-   display: flex;
-   overflow-x: auto;
-    }
-
-  .service {
-  flex: 0 0 auto;
-  margin-right: 20px;
-  }
-
-  .service img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  }
-  footer {
-    background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
-
- .footer-container {
-    border-color: black;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  }
-
-  .footer-section {
-  width: 350px; 
-  /* Adjust the width as needed */
-  }
-
-  .footer-bottom {
-  text-align: center;
- }
-  /* styles.css */
-  .gallery {
-  display: flex;
- }
- .service{
-  padding: 20px;
- }
-
- .service-container {
-  background-color: whitesmoke;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000; /* Replace with your desired border style */
-  box-sizing: border-box;
-
-
-  }
-
- .portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
- }
-
- .portfolio-item {
-
-  position: relative;
- }
-
- .portfolio-item img {
-  width: 300px;
-  height: 400px;
-  object-fit: cover;
- }
- .portfolio-item:hover {
-   
-    background-color: #ccc;
+}
+/* Gallery Section */
+.gallery {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+    overflow-x: hidden;
 }
 
- .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
- }
+.gallery .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
- .overlay:hover {
-  opacity: 1;
- }
+.gallery h2 {
+    font-size: 2.5em;
+    color: #ff4800;
+    margin-bottom: 20px;
+}
 
- .overlay h3, .overlay p {
-  margin: 0;
-  padding: 10px;
- }
- /* ... (existing CSS code) ... */
+.gallery p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 200px; /* Adjust the height of the rows as needed */
+    gap: 20px;
+    max-height: 420px; /* Allows for 2 rows of images with some spacing */
+    overflow-y: scroll;
+    padding-right: 20px; /* Add padding to account for scrollbar width */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover:before {
+    opacity: 1;
+}
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.watermark {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px;  /* Adjust as needed */
+    opacity: 0.5; /* Adjust the opacity as needed */
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+}
+.lightbox-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1100; /* Ensure the close button is above all other elements */
+}
+/* About Us Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    color: #ff4800; /* Highlight color */
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif;
+    border-left: 5px solid #ff4800; /* Decorative border */
+    padding-left: 20px;
+}
+
+.about-image {
+    max-width: 40%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match shadow with section */
+}
+.see-more {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .btn-see-more {
+        background-color: #ff4800;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-family: 'Dancing Script', cursive;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .btn-see-more:hover {
+        background-color: #e44000;
+    }
+
+    .btn-see-more::after {
+        content: '\2192'; /* Unicode for right arrow */
+        margin-left: 8px;
+        font-size: 20px;
+    }
 
 
 
- 
 
 
 
-
-
-
-  </style>
+    </style>
 </head>
 <body>
-  <header id="home">
-    <link href="https://fonts.googleapis.com/css?family=Italianno&display=swap" rel="stylesheet">
-
-<nav>
-  <img class="logo" src="assets/logo.jpeg" alt="My Dream Events Logo">
-
-  <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#services">Services</a></li>
-  <li><a href="#portfolio">Gallery</a></li>
-  <li><a href="#contact">Contact Us</a></li>
-  </ul>
-  
-</nav>
-  </header>
-  <section id="home">
-    <div id="carouselExample" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/sanjaulishimla.jpg" alt="Slide 1">
-          <div class="event-date-form">
-            
-            <h3>Event Date</h3>
-            <form>
-              <label for="event-date-from">From:</label>
-              <input type="date" id="event-date-from" name="event-date-from">
-              <label for="event-date-to">To:</label>
-              <input type="date" id="event-date-to" name="event-date-to">
-              <button type="submit" onclick="sendWhatsAppMessage()">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-   
-
-    <section id="services">
-    <h2>Our Services</h2>
-    
-    <div class="service-container">
-      <div class="service">
-        <img src="assets/destinationweding.jpeg" alt="Service 1">
-        <h3>Destination Wedding</h3>
-      </div>
-    
-      <div class="service">
-        <img src="assets/charchshimla.jpg" alt="Service 2">
-        <h3>Venue booking</h3>
-      </div>
-    
-      <div class="service">
-        <img src="assets/corporate.jpg" alt="Service 3">
-        <h3>Corporate Events</h3>
-      </div>
-
-      <div class="service">
-        <img src="assets/gethering.jpg" alt="Service 1">
-        <h3>Soical Gatherings</h3>
-      </div>
-    
-      <div class="service">
-        <img src="assets/theme.jpg" alt="Service 2">
-        <h3>Wedding theme and decor</h3>
-       
-      </div>
-    
-      <div class="service">
-        <img src="assets/planningtheme.jpg" alt="Service 3">
-        <h3>Decoration and styling</h3>
-        
-      </div>
-      
-    </div>
-    
-   </section>
-  
-
-   <section id="portfolio">
-    
-    <h2>Gallery</h2>
-    <div class="portfolio">
-      
-      <div class="portfolio-item">
-        <img src="assets/mydream/forest.jpeg" alt="Portfolio Item 2">
-        </div>
-        <div class="portfolio-item">
-          <img src="assets/mydream/stagepink.jpeg" alt="Portfolio Item 2">
-          </div>
-          <div class="portfolio-item">
-            <img src="assets/mydream/ring.jpeg" alt="Portfolio Item 2">
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">My Dream Events</a>
             </div>
-            <div class="portfolio-item">
-              <img src="assets/mydream/ringcerm.jpeg" alt="Portfolio Item 2">
-              </div>
-              <div class="portfolio-item">
-                <img src="assets/mydream/secondring.jpeg" alt="Portfolio Item 2">
+                        <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h2 class="hero-subtitle subtitle-1">Plan Your</h2>
+        <h1>Destination Wedding</h1>
+        <h2 class="hero-subtitle subtitle-2">in</h2>
+        <h2 class="hero-subtitle subtitle-3">Himachal Pradesh</h2>
+    </div>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="assets/Shimlaloongwood.jpg" alt="Sanjauli Shimla">
+      </div>
+        <div class="mySlides fade">
+          <img src="assets/snowshimla.jpg" alt="Sanjauli Shimla">
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/sanjulirang.jpg" alt="Sanjauli Shimla">
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/sanjaulishimla.jpg" alt="Sanjauli Shimla">
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/moutain.jpg" alt="Sanjauli Shimla">
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/fogymoutain.jpg" alt="Sanjauli Shimla">
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/shimlahill.jpg" alt="Sanjauli Shimla">
+        </div>
+</section>
+
+
+
+   <!-- About Us Section -->
+<section id="about" class="about">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>At My Dream Events, we turn your dream wedding into reality amidst the breathtaking landscapes of Shimla, Manali, Dharamshala, and Kasauli. With our bespoke packages, we cater to your every need and preference, ensuring a celebration that is uniquely yours.</p>
+    </div>
+    <div class="about-image">
+      <img src="assets/logo.jpeg" alt="My Dream Event Logo">
+    </div>
+</section>
+
+    <!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+        <p>Experience Affordable and Customizable Event Planning Services for Unforgettable Weddings, Corporate Events, and More in Shimla, Manali, Dharamshala, and Kasauli.</p>
+        <div class="services-grid">
+            <!-- Service 11: Destination Weddings -->
+            <div class="service-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Destination Weddings</h3>
+                <p>Expert planning for destination weddings in Shimla, Manali, Dharamshala, and Kasauli.</p>
+            </div>
+            
+            <!-- Service 10: Corporate Events -->
+            <div class="service-card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Corporate Events</h3>
+                <p>Professional planning for corporate events, conferences, and seminars with seamless execution.</p>
+            </div>
+
+            <!-- Service 12: Event Management -->
+            <div class="service-card">
+                <i class="fas fa-tasks"></i>
+                <h3>Event Management</h3>
+                <p>Comprehensive event management services ensuring everything runs smoothly and to plan.</p>
+            </div>
+
+            <!-- Service 1: Decoration -->
+            <div class="service-card">
+                <i class="fas fa-gift"></i>
+                <h3>Decoration</h3>
+                <p>Professionally designed decor at attractive prices to make your event visually stunning.</p>
+            </div>
+
+            <!-- Service 2: Photography & Videography -->
+            <div class="service-card">
+                <i class="fas fa-camera"></i>
+                <h3>Photography & Videography</h3>
+                <p>Expert teams for candid and traditional photography, and high-quality videography, capturing every special moment and reliving your event in style.</p>
+            </div>
+
+            <!-- Service 4: Makeup & Hairstyling -->
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Makeup & Hairstyling</h3>
+                <p>Talented makeup artists ensuring you look your best on your big day.</p>
+            </div>
+
+            <!-- Service 5: Mehendi & Haldi -->
+<div class="service-card">
+    <i class="fas fa-hand-sparkles"></i>
+    <h3>Mehendi & Haldi</h3>
+    <p>Experienced mehendi artists offering a wide range of intricate designs. 
+       Also, professional Haldi ceremony arrangements for a vibrant celebration.</p>
+</div>
+
+
+            <!-- Service 6: Catering -->
+            <div class="service-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Catering</h3>
+                <p>Delicious menus covering all cuisines and price ranges for an unforgettable culinary experience.</p>
+            </div>
+
+            <!-- Service 7: Entertainment -->
+            <div class="service-card">
+                <i class="fas fa-music"></i>
+                <h3>Entertainment</h3>
+                <p>High-quality artists, from DJs to traditional performances, to keep your guests entertained.</p>
+            </div>
+
+            <!-- Service 8: Venue -->
+            <div class="service-card">
+                <i class="fas fa-building"></i>
+                <h3>Venue</h3>
+                <p>We help you find the perfect venue that matches your budget and style.</p>
+            </div>
+
+            <!-- Service 9: Invites -->
+            <div class="service-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Invites</h3>
+                <p>Custom invitation designs that perfectly match your event’s theme.</p>
+            </div>
+
+            <!-- Service 3: Transportation -->
+            <div class="service-card">
+                <i class="fas fa-bus"></i>
+                <h3>Transportation</h3>
+                <p>Reliable and comfortable transportation options to ensure your guests arrive smoothly and on time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <h2>Our Packages</h2>
+        <div class="package">
+            <a href="package-details.html?package=silver">
+                <img src="assets/Silver-Package-Graphics-Design.png" alt="Silver Package" class="package-img">
+                <div class="details">
+                    <h3>Silver Package</h3>
+                    <p class="price">Starting from INR 11,00,000</p>
+                    <p>Includes venue selection, accommodation, transportation, catering, event planning, entertainment, photography, videography, and decoration.</p>
                 </div>
-                <div class="portfolio-item">
-                  <img src="assets/mydream/stage.jpeg" alt="Portfolio Item 2">
-                  </div>
-                  <div class="portfolio-item">
-                    <img src="assets/mydream/stagepink.jpeg" alt="Portfolio Item 2">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ad.jpeg" alt="Ad">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ae.jpeg" alt="Ae">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/af.jpeg" alt="Af">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ag.jpeg" alt="Ag">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ah.jpeg" alt="Ah">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ai.jpeg" alt="Ai">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aj.jpeg" alt="Aj">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ak.jpeg" alt="Ak">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/al.jpeg" alt="Al">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/am.jpeg" alt="Am">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/an.jpeg" alt="An">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ao.jpeg" alt="Ao">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/ap.jpeg" alt="Ap">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aq.jpeg" alt="Aq">
-                    </div>
-                    
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa2.jpeg" alt="Aa2">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa3.jpeg" alt="Aa3">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa4.jpeg" alt="Aa4">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa14.jpeg" alt="Aa5">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa6.jpeg" alt="Aa6">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa7.jpeg" alt="Aa7">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa8.jpeg" alt="Aa8">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa9.jpeg" alt="Aa9">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa10.jpeg" alt="Aa10">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa11.jpeg" alt="Aa11">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa12.jpeg" alt="Aa12">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa13.jpeg" alt="Aa13">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa14.jpeg" alt="Aa14">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa15.jpeg" alt="Aa15">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa16.jpeg" alt="Aa16">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa17.jpeg" alt="Aa17">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa18.jpeg" alt="Aa18">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa19.jpeg" alt="Aa19">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa20.jpeg" alt="Aa20">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa21.jpeg" alt="Aa21">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa22.jpeg" alt="Aa22">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa23.jpeg" alt="Aa23">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa24.jpeg" alt="Aa24">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa25.jpeg" alt="Aa25">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa26.jpeg" alt="Aa26">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa27.jpeg" alt="Aa27">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa28.jpeg" alt="Aa28">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa29.jpeg" alt="Aa29">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa30.jpeg" alt="Aa30">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa31.jpeg" alt="Aa31">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa32.jpeg" alt="Aa32">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa33.jpeg" alt="Aa33">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa34.jpeg" alt="Aa34">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa35.jpeg" alt="Aa35">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa36.jpeg" alt="Aa36">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa37.jpeg" alt="Aa37">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa38.jpeg" alt="Aa38">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa39.jpeg" alt="Aa39">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa40.jpeg" alt="Aa40">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa41.jpeg" alt="Aa41">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa42.jpeg" alt="Aa42">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa43.jpeg" alt="Aa43">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa44.jpeg" alt="Aa44">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa45.jpeg" alt="Aa45">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa46.jpeg" alt="Aa46">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa47.jpeg" alt="Aa47">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa48.jpeg" alt="Aa48">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa49.jpeg" alt="Aa49">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa50.jpeg" alt="Aa50">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa51.jpeg" alt="Aa51">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa52.jpeg" alt="Aa52">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa53.jpeg" alt="Aa53">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa54.jpeg" alt="Aa54">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa55.jpeg" alt="Aa55">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa56.jpeg" alt="Aa56">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa57.jpeg" alt="Aa57">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa58.jpeg" alt="Aa58">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa59.jpeg" alt="Aa59">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa60.jpeg" alt="Aa60">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa61.jpeg" alt="Aa61">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa62.jpeg" alt="Aa62">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa63.jpeg" alt="Aa63">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa64.jpeg" alt="Aa64">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa65.jpeg" alt="Aa65">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa66.jpeg" alt="Aa66">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa67.jpeg" alt="Aa67">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa68.jpeg" alt="Aa68">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa69.jpeg" alt="Aa69">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa70.jpeg" alt="Aa70">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa71.jpeg" alt="Aa71">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa72.jpeg" alt="Aa72">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa73.jpeg" alt="Aa73">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa74.jpeg" alt="Aa74">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa75.jpeg" alt="Aa75">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa76.jpeg" alt="Aa76">
-                    </div>
-                    <div class="portfolio-item">
-                      <img src="assets/mydream/aa77.jpeg" alt="Aa77">
-                    </div>
-                  </div>
-                    
-                    
-                  
-                         
+            </a>
+        </div>
+        <div class="package">
+            <a href="package-details.html?package=gold">
+                <img src="assets/Gold-Package.webp" alt="Gold Package" class="package-img">
+                <div class="details">
+                    <h3>Gold Package</h3>
+                    <p class="price">Starting from INR 17,00,000</p>
+                    <p>Includes enhanced services and luxurious options for your special day, ensuring a grand celebration.</p>
+                </div>
+            </a>
+        </div>
+        <div class="package">
+            <a href="package-details.html?package=premium">
+                <img src="assets/premium-package.png" alt="Royal Premium Package" class="package-img">
+                <div class="details">
+                    <h3>Royal Premium Package</h3>
+                    <p class="price">Starting from INR 25,00,000</p>
+                    <p>Experience unparalleled luxury with our Royal Premium Package. Includes all features of the Gold Package plus exclusive services such as bespoke decor, premium accommodation, and personalized event planning.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Gallery</h2>
+        <p>Take a look at some of the beautiful moments we've created for our clients.</p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla19.jpg" alt="Destination Wedding Shimla 19">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla21.jpg" alt="Destination Wedding Shimla 21">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla25.jpg" alt="Destination Wedding Shimla 25">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla28.jpg" alt="Destination Wedding Shimla 28">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla29.jpg" alt="Destination Wedding Shimla 29">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla33.jpg" alt="Destination Wedding Shimla 33">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla46.jpg" alt="Destination Wedding Shimla 46">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/mydream/destination_wedding_in_shimla47.jpg" alt="Destination Wedding Shimla 47">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla1.jpeg" alt="Corporate Event Shimla 1">
       </div>
-      
-      
-      
-      <!-- Add more portfolio items as needed -->
+      <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla2.jpeg" alt="Corporate Event Shimla 2">
+      </div>
+      <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla3.jpeg" alt="Corporate Event Shimla 3">
+      </div>
+      <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla4.jpeg" alt="Corporate Event Shimla 4">
+      </div>
+      <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla5.jpeg" alt="Corporate Event Shimla 5">
+      </div>
+      <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla6.jpeg" alt="Corporate Event Shimla 6">
+      </div>
+      <div class="gallery-item">
+          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla7.jpeg" alt="Corporate Event Shimla 7">
+      </div>
+
+        </div>
+        <div class="see-more">
+            <a href="gallery.html" class="btn-see-more">See More &#8594;</a>
+        </div>
     </div>
-    <a href="https://www.instagram.com/my_dream_event_s/" class="portfolio-item">
-      <h3>Click for More Images</h3>
-      
-    </a>
+</section>
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="Lightbox Image">
+        <img class="watermark" src="https://mydreamevent.in/assets/logo.jpeg" alt="My Dream Events Watermark">
+    </div>
+</div>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"My Dream Events made our wedding day truly magical. Everything was perfectly organized, and our guests were amazed by the attention to detail. Highly recommended!"</p>
+                    <div class="client">- Pallavi Sharma</div>
+                </div>
+                <div class="testimonial">
+                    <p>"From the venue selection to the catering, everything was flawless. Thank you for making our special day unforgettable!"</p>
+                    <div class="client">- Priya Verma</div>
+                </div>
+                <div class="testimonial">
+                    <p>"The team at My Dream Events exceeded our expectations. Their creativity and professionalism ensured a stress-free experience for us."</p>
+                    <div class="client">- Ankit Mehta</div>
+                </div>
+                <div class="testimonial">
+                    <p>"We couldn’t have asked for a better event planner. Every detail was meticulously handled, leaving us free to enjoy our day."</p>
+                    <div class="client">- Nisha Agarwal</div>
+                </div>
+            </div>
+        </div>
+    </section>
     
-  
-   </section>
 
-   <section id="contact">
-    <h2>Contact Us</h2>
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Whether you’re planning a wedding, corporate event, or any other special occasion, feel free to reach out to us.</p>
+            
+            <div class="contact-details">
+                <div class="contact-info">
+                    <h3>Our Contact Information</h3>
+                    <p><strong>Phone:</strong> <a href="tel:+918219559908">+91-8219559908</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:mydreameventsshimla@gmail.com">mydreameventsshimla@gmail.com</a></p>
+                    <p><strong>Address:</strong> My Dream Events,Jawahar Colony Sanjauli Shimla,171006 Himachal Pradesh, India</p>
+                </div>
     
-   </section>
+                <form action="mailto:mydreameventsshimla@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    
 
-   <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>About Us</h3>
-        <p> We specialize in creating unforgettable destination weddings and corporate events, meticulously planned to perfection. Contact us to turn your vision into reality.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="#">Destination Weddings</a></li>
-          <li><a href="#">Corporate Events</a></li>
-          <li><a href="#">Social Gatherings</a></li>
-          <li><a href="#">Event Planning</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <p1>Housing Bord Coloney Sanjauli Shimla 171006 Hp India</p1>
-        <p>
-        </p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section more">
+                    <h3>About My Dream Events</h3>
+                    <p>My Dream Events specializes in creating unforgettable wedding experiences in the scenic landscapes of Shimla, Manali, Dharamshala, and Kasauli. We offer a range of packages tailored to meet your unique needs and preferences.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#silver">Silver Package</a></li>
+                        <li><a href="#gold">Gold Package</a></li>
+                        <li><a href="#premium">Royal Premium Package</a></li>
+                        <li><a href="#customize">Customize Package</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> My Dream Events,Jawahar Colony Sanjauli Shimla,171006 Himachal Pradesh, India</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+918219559908">+91-8219559908</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:mydreameventsshimla@gmail.com">mydreameventsshimla@gmail.com</a></p>
+                </div>
+                
+                <div class="footer-section social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/mydreameventsshimla?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.facebook.com/mydreameventsshimla?mibextid=LQQJ4d" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/my_dream_event_s?igsh=eHVpZG1rbjBlNHE3&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/my-dream-event/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 My Dream Events. All rights reserved.</p>
+                <p>Website by <a href="https://mydreamevent.in" target="_blank">My Dream Events</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Function to open the lightbox with the clicked image
+        document.querySelectorAll('.gallery-item img').forEach(image => {
+            image.addEventListener('click', function() {
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.querySelector('.lightbox-img');
+                lightboxImg.src = this.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+    
+        // Function to close the lightbox when the close button or outside the image is clicked
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('lightbox').style.display = 'none';
+        });
+    
+        document.getElementById('lightbox').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
 
-        <p1>Phone: +918219559908    </p1>
-        <p></p>
 
 
-        <p1>Email: mydreameventsshimla@gmail.com</p1>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 My Dream Events. All rights reserved.</p>
-    </div>
-   </footer>
-  
 
-  <!-- Add the required scripts for Bootstrap and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 
-  <script>// Activate the carousel
-    $(document).ready(function() {
-      $('#carouselExample').carousel({
-        interval: 5000, // Slide duration of 5 seconds
-        pause: "hover" // Pause on hover
-      });
-    });
-    function sendWhatsAppMessage() {
-  // Get the input values
-  var fromDate = document.getElementById('event-date-from').value;
-  var toDate = document.getElementById('event-date-to').value;
-
-  // Construct the WhatsApp message
-  var message = "Hello, I hope this email finds you well. I would like to inquire about the availability of event dates from " + fromDate + " to " + toDate + ". Kindly provide me with the necessary information regarding venue availability and any associated costs. Thank you in advance for your assistance.";
-
-  // Construct the WhatsApp URL
-  var phoneNumber = "918219559908"; // Replace with your phone number
-  var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-  // Open the WhatsApp URL in a new tab/window
-  window.open(whatsappURL);
+        type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "name": "Destination Wedding by My Dream Events",
+  "location": {
+    "@type": "Place",
+    "name": "Shimla",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shimla",
+      "addressRegion": "HP",
+      "addressCountry": "IN"
+    }
+  },
+  "description": "My Dream Events specializes in creating unforgettable destination weddings and corporate events in Shimla, Manali, Dharamshala, and Kasauli.",
+  "startDate": "2024-08-09",
+  "endDate": "2024-08-09",
+  "eventAttendanceMode": "http://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "http://schema.org/EventScheduled",
+  "organizer": {
+    "@type": "Organization",
+    "name": "My Dream Events",
+    "url": "https://mydreamevent.in"
+  }
 }
 
-    
-  
-    
+let slideIndex = 0;
+showSlides();
 
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  // Hide all slides
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}  // Reset to first slide if at the end
+    slides[slideIndex-1].style.display = "block";  // Show the current slide
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
+}
+
+    </script>
     
-   
-     </script>
+    
 </body>
+
 </html>

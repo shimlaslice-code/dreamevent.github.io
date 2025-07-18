@@ -1,1366 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dream Events - Home</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destination Wedding in Shimla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #800020;
+      --accent: #ffffff;
+      --text: #333333;
     }
-    
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--accent);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white;
+    }
+
     nav ul {
-        flex-direction: column;
-        text-align: center;
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
     }
-    
-    nav ul li {
-        margin: 10px 0;
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      transition: all 0.3s ease;
     }
-}
-@media (max-width: 768px) {
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-bottom: 2px solid white;
+      padding-bottom: 3px;
+    }
+
     .hero {
-        padding: 20px;
-        height: auto;
-    }
-    
-    .hero h1 {
-        font-size: 2em;
-    }
-}
-@media (max-width: 768px) {
-    .services-grid, .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto; /* Adjust row height for better fit */
-        max-height: none; /* Allow the grid to grow naturally */
-    }
-}
-@media (max-width: 768px) {
-    h1, h2, h3, h4, h5, h6 {
-        font-size: calc(1.5em + 1vw); /* Responsive scaling */
-    }
-
-    p {
-        font-size: calc(1em + 0.5vw);
-    }
-}
-@media (max-width: 768px) {
-    section {
-        padding: 40px 10px;
-    }
-    
-    .packages .package, .services .service {
-        margin: 15px;
-        padding: 15px;
-    }
-}
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-section {
-        margin: 20px 0;
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-    .form-group input, .form-group textarea {
-        padding: 15px;
-        font-size: 1.1em;
-    }
-    
-    .submit-btn {
-        padding: 15px;
-        font-size: 1.2em;
-    }
-}
-
-
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        a {
-            color: #ff4800;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #333;
-        }
-
-        header {
-            color: #070000;
-            padding: 10px 0;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header .logo {
-            font-size: 2em;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: black;
-            font-size: 1.1em;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .hero {height: 100vh;
+    background: linear-gradient(to bottom, rgba(240, 196, 207, 0.7), rgba(75, 67, 67, 0.6)),
+                url('https://source.unsplash.com/1600x700/?wedding,shimla') no-repeat center center/cover;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative; /* Ensure positioning for the slideshow container */
-}
-
-.slideshow-container {
-    position: absolute; /* Position the slideshow within the hero section */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Hide any overflow */
-}
-
-.mySlides {
-    display: none; /* Hide all slides by default */
-}
-
-.mySlides img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures images cover the container while preserving aspect ratio */
-}
-
-
-
-
-
-
-
-
-       
-
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .about, .services, .packages, .gallery, .testimonials, .contact {
-            background-color: #f8f9fa;
-            padding: 60px 20px;
-        }
-
-        .about h2, .services h2, .packages h2, .gallery h2, .testimonials h2, .contact h2 {
-            margin-bottom: 40px;
-            font-family: 'Playfair Display', serif;
-            color: #007bff;
-        }
-
-        .about p, .services p, .packages p, .gallery p, .testimonials p, .contact p {
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .services .service, .packages .package, .testimonials .testimonial {
-            margin-bottom: 40px;
-        }
-
-        .services .service, .packages .package {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .services .service img, .packages .package img {
-            max-width: 300px;
-            margin: 0 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .services .service .details, .packages .package .details {
-            max-width: 600px;
-        }
-
-        .testimonials .testimonial p {
-            font-style: italic;
-        }
-
-        .testimonials .testimonial .client {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact form .form-group {
-            margin-bottom: 20px;
-        }
-
-        .contact form .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .contact form .form-group input, .contact form .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .contact form .form-group textarea {
-            height: 150px;
-        }
-
-        .contact form .submit-btn {
-            background-color: #007bff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact form .submit-btn:hover {
-            background-color: #0056b3;
-        }
-        /* Packages Section */
-.packages {
-    padding: 40px 20px;
-    background-color: #f4f4f4; /* Light background to distinguish section */
-    text-align: center;
-}
-
-.packages h2 {
-    font-size: 2.5em;
-    color: #ff4800; /* Accent color */
-    margin-bottom: 30px;
-    font-family: 'Great Vibes', cursive; /* Elegant heading font */
-}
-
-.package {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff; /* White background for each package */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.package-img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.details {
-    max-width: 500px;
-}
-
-.details h3 {
-    font-size: 2em;
-    color: #ff4800; /* Accent color */
-    margin-bottom: 10px;
-    font-family: 'Great Vibes', cursive; /* Elegant heading font */
-}
-
-.details .price {
-    font-size: 1.5em;
-    color: #333; /* Darker text for contrast */
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.details p {
-    font-size: 1.2em;
-    color: #555; /* Slightly lighter text */
-    line-height: 1.6;
-    font-family: 'Playfair Display', serif; /* Elegant paragraph font */
-}
-
-
-        footer {
-            background-color: #f8f9fa;
-            padding: 40px 0;
-            text-align: center;
-            border-top: 2px solid #e9ecef;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-section {
-            flex: 1;
-            margin: 20px;
-            min-width: 250px;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .footer-section p, .footer-section a, .footer-section ul {
-            color: #555;
-            text-decoration: none;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-section ul li a {
-            color: #ff4800;
-        }
-
-        .footer-section ul li a:hover {
-            color: #333;
-        }
-
-        .footer-section .contact p, .footer-section .contact a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .footer-section .contact p i, .footer-section .contact a i {
-            margin-right: 10px;
-        }
-
-        .footer-section .social ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        .footer-section .social ul li {
-            margin: 0 10px;
-        }
-
-        .footer-section .social ul li a {
-            color: #ff4800;
-            font-size: 1.5em;
-        }
-
-        .footer-section .social ul li a:hover {
-            color: #333;
-        }
-
-        .footer-bottom {
-            margin-top: 20px;
-            color: #6c757d;
-        }
-
-        .footer-bottom a {
-            color: #ff4800;
-        }
-
-        .footer-bottom a:hover {
-            color: #333;
-        }
-        /* Footer Section - Contact */
-.footer-section.contact {
-    padding: 20px;
-    background-color: #f8f9fa; /* Light background for contrast */
-    border-top: 2px solid #ff4800; /* Accent color border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    margin: 20px 0; /* Spacing around the section */
-}
-
-.footer-section.contact h3 {
-    font-size: 1.8em;
-    color: #ff4800; /* Accent color */
-    margin-bottom: 15px;
-    font-family: 'Playfair Display', serif; /* Elegant heading font */
-}
-
-.footer-section.contact p {
-    font-size: 1em;
-    color: #333; /* Darker text for readability */
-    line-height: 1.6;
-    margin: 10px 0;
-    font-family: 'Playfair Display', serif; /* Elegant paragraph font */
-}
-
-.footer-section.contact p i {
-    color: #ff4800; /* Accent color for icons */
-    margin-right: 10px;
-}
-
-.footer-section.contact a {
-    color: #ff4800; /* Accent color for links */
-    text-decoration: none;
-}
-
-.footer-section.contact a:hover {
-    text-decoration: underline;
-}
-
-        
-        /* Container for the entire section */
-        #services .container {
-    text-align: center;
-    padding: 40px 15px; /* Reduced padding */
-}
-
-/* Heading Styles */
-/* Services Section */
-#services .container {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-/* Heading Styles */
-#services h2 {
-    font-size: 2em; /* Reduced from 2.5em */
-    margin-bottom: 20px;
-    color: #ff5500;
-}
-
-#services p {
-    font-size: 1em; /* Reduced from 1.2em */
-    margin-bottom: 50px;
-    color: #333;
-}
-
-/* Service Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-/* Service Card */
-.service-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s ease;
-    height: 320px; /* Set a fixed height for the service card */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Icon Styles */
-.service-card i {
-    font-size: 2.5em; /* Reduced from 3em */
-    color: #ff6a00;
-    margin-bottom: 15px;
-}
-
-/* Service Card Title */
-.service-card h3 {
-    font-size: 1.2em; /* Reduced from 1.5em */
-    color: #000000;
-    margin: 15px 0 10px 0;
-}
-
-/* Service Card Description */
-.service-card p {
-    font-size: 0.9em; /* Reduced from 1em */
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* Centering content inside the service card */
-.service-card h3, .service-card p, .service-card i {
-    margin: 0 auto;
-}
-
-
-
-
-
-/* Testimonials Section */
-#testimonials {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#testimonials .container {
+    color: white;
+    padding: 0 20px;
+  }
+
+  .hero-text {
     max-width: 1200px;
-    margin: 0 auto;
-}
-
-#testimonials h2 {
-    font-size: 2.5em;
-    color: #ff4800;
-    margin-bottom: 40px;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.testimonial {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.testimonial:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial p {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.client {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #ff4800;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Contact Section */
-.contact {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.contact .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.contact h2 {
-    font-size: 2.5em;
-    color: #ff4800;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 40px;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-info {
-    text-align: left;
-    margin-bottom: 40px;
-}
-
-.contact-info h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    font-size: 1.1em;
-    color: #666;
-    margin: 5px 0;
-}
-
-.contact-info a {
-    color: #ff4800;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-form {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 30px;
     width: 100%;
-    max-width: 600px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    font-size: 1.1em;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #ff4800;
-    outline: none;
-}
-
-.submit-btn {
-    background-color: #ff4800;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #e04400;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-details {
-        flex-direction: column;
-    }
-
-    .contact-info {
-        margin-bottom: 20px;
-    }
-
-    form {
-        width: 100%;
-    }
-}
-/* Gallery Section */
-.gallery {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-    overflow-x: hidden;
-}
-
-.gallery .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery h2 {
-    font-size: 2.5em;
-    color: #ff4800;
-    margin-bottom: 20px;
-}
-
-.gallery p {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 40px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 200px; /* Adjust the height of the rows as needed */
-    gap: 20px;
-    max-height: 420px; /* Allows for 2 rows of images with some spacing */
-    overflow-y: scroll;
-    padding-right: 20px; /* Add padding to account for scrollbar width */
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-item:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover:before {
-    opacity: 1;
-}
-/* Lightbox Styles */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-.watermark {
-    position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    right: 20px;  /* Adjust as needed */
-    opacity: 0.5; /* Adjust the opacity as needed */
-    width: 150px; /* Adjust the size as needed */
-    height: auto;
-}
-.lightbox-content {
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-.lightbox-img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2em;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1100; /* Ensure the close button is above all other elements */
-}
-/* About Us Section */
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 10%;
-    background: linear-gradient(to right, #f5f7fa, #c3cfe2); /* Subtle gradient background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.about-content {
-    max-width: 50%;
-}
-
-.about-content h2 {
-    font-size: 2.5em;
-    color: #ff4800; /* Highlight color */
-    margin-bottom: 20px;
+  .hero-text h1 {
+    font-size: 60px;
     font-family: 'Great Vibes', cursive;
-}
+    margin-bottom: 20px;
+  }
 
-.about-content p {
-    font-size: 1.2em;
-    color: #333; /* Darker text for better readability */
-    line-height: 1.6;
-    font-family: 'Playfair Display', serif;
-    border-left: 5px solid #ff4800; /* Decorative border */
-    padding-left: 20px;
-}
+  .hero-text p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
 
-.about-image {
-    max-width: 40%;
-}
-
-.about-image img {
-    width: 100%;
+  .hero-text .btn {
+    background-color: #800020;
+    color: white;
+    padding: 16px 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match shadow with section */
+    font-size: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .hero-text .btn:hover {
+    background-color: #a8324b;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      height: auto;
+      padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 38px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text .btn {
+      padding: 14px 30px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-text h1 {
+      font-size: 30px;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+    }
+
+    .hero-text .btn {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+  }
+
+   /* Why Choose Us - Styling */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
-.see-more {
-        margin-top: 20px;
-        text-align: center;
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary);
+  font-size: 32px;
+}
+
+.destination-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.destination-card {
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.destination-card h3 {
+  margin: 15px 10px 10px;
+  font-size: 22px;
+  color: var(--primary);
+}
+
+.destination-card p {
+  padding: 0 15px 20px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+    h4 {
+      color: var(--primary);
+      margin-top: 10px;
+    }
+    .btn:hover {
+  background-color: #a8324b;
+}
+
+
+    footer {
+      background: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
     }
 
-    .btn-see-more {
-        background-color: #ff4800;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-family: 'Dancing Script', cursive;
-        font-size: 18px;
-        transition: background-color 0.3s ease;
-        display: inline-flex;
-        align-items: center;
+    .social-icons a {
+      margin: 0 5px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    .btn-see-more:hover {
-        background-color: #e44000;
-    }
-
-    .btn-see-more::after {
-        content: '\2192'; /* Unicode for right arrow */
-        margin-left: 8px;
-        font-size: 20px;
-    }
-
-
-
-
-
-
-    </style>
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" style="text-decoration: none; color: inherit;">My Dream Events</a>
-            </div>
-                        <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#packages">Packages</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
+  <header>
+    <div class="logo">Destination Wedding in Shimla</div>
+    <nav>
+      <ul>
+        <li><a href="frontpage.html" class="active">Home</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="packages (2).html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact(2).html">Contact</a></li>
+        <li> <a href="testimonials(2).html"> Testimonials</a></li>
+        <li><a href="aboutus(2).html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-<section class="hero">
-    
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img src="assets/Shimlaloongwood.jpg" alt="Sanjauli Shimla">
-      </div>
-        <div class="mySlides fade">
-          <img src="assets/snowshimla.jpg" alt="Sanjauli Shimla">
-        </div>
-        <div class="mySlides fade">
-          <img src="assets/sanjulirang.jpg" alt="Sanjauli Shimla">
-        </div>
-        <div class="mySlides fade">
-          <img src="assets/sanjaulishimla.jpg" alt="Sanjauli Shimla">
-        </div>
-        <div class="mySlides fade">
-          <img src="assets/moutain.jpg" alt="Sanjauli Shimla">
-        </div>
-        <div class="mySlides fade">
-          <img src="assets/fogymoutain.jpg" alt="Sanjauli Shimla">
-        </div>
-        <div class="mySlides fade">
-          <img src="assets/shimlahill.jpg" alt="Sanjauli Shimla">
-        </div>
+ <section class="hero">
+  <div class="hero-text">
+    <h1>Plan Your Dream Wedding</h1>
+    <p>Celebrate love in the enchanting hills of Shimla with unforgettable elegance and charm.</p>
+    <a href="getstart.html" class="btn">Get Started</a>
+  </div>
 </section>
 
-
-
-   <!-- About Us Section -->
-<section id="about" class="about">
-    <div class="about-content">
-        <h2>About Us</h2>
-        <p>At My Dream Events, we turn your dream wedding into reality amidst the breathtaking landscapes of Shimla, Manali, Dharamshala, and Kasauli. With our bespoke packages, we cater to your every need and preference, ensuring a celebration that is uniquely yours.</p>
+ <!-- Why Choose Us -->
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="destination-list">
+    <div class="destination-card">
+      <img src="h:\kotirow video\luxury.jpeg" alt="Luxury">
+      <h3>Luxury Experience</h3>
+      <p>We craft exclusive weddings with elegance and style, tailored to your dreams.</p>
     </div>
-    <div class="about-image">
-      <img src="assets/logo.jpeg" alt="My Dream Event Logo">
+    <div class="destination-card">
+      <img src="h:\kotirow video\expert planning.jpeg" alt="Planner">
+      <h3>Expert Planning</h3>
+      <p>From venue booking to decor and logistics, we manage everything professionally.</p>
     </div>
+    <div class="destination-card">
+      <img src="h:\kotirow video\personalized.jpeg" alt="Personal Touch">
+      <h3>Personalized Touch</h3>
+      <p>Every detail reflects your story – from Mehendi to Mandap.</p>
+    </div>
+    <div class="destination-card">
+      <img src="h:\kotirow video\visual stunning.jpeg" alt="Photography">
+      <h3>Stunning Visuals</h3>
+      <p>Capture every magical moment with professional photography and cinematography.</p>
+    </div>
+    <div class="destination-card">
+      <img src="h:\kotirow video\scenic venue.jpeg" alt="Venues">
+      <h3>Scenic Venues</h3>
+      <p>Choose from curated wedding venues nestled in the hills, valleys, and heritage properties.</p>
+    </div>
+    <div class="destination-card">
+      <img src="h:\kotirow video\endtoendsupport.png" alt="Support">
+      <h3>End-to-End Support</h3>
+      <p>Our team stays with you through every step – from planning to execution and beyond.</p>
+    </div>
+  </div>
 </section>
 
-    <!-- Services Section -->
-<section id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <p>Experience Affordable and Customizable Event Planning Services for Unforgettable Weddings, Corporate Events, and More in Shimla, Manali, Dharamshala, and Kasauli.</p>
-        <div class="services-grid">
-            <!-- Service 11: Destination Weddings -->
-            <div class="service-card">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Destination Weddings</h3>
-                <p>Expert planning for destination weddings in Shimla, Manali, Dharamshala, and Kasauli.</p>
-            </div>
-            
-            <!-- Service 10: Corporate Events -->
-            <div class="service-card">
-                <i class="fas fa-briefcase"></i>
-                <h3>Corporate Events</h3>
-                <p>Professional planning for corporate events, conferences, and seminars with seamless execution.</p>
-            </div>
-
-            <!-- Service 12: Event Management -->
-            <div class="service-card">
-                <i class="fas fa-tasks"></i>
-                <h3>Event Management</h3>
-                <p>Comprehensive event management services ensuring everything runs smoothly and to plan.</p>
-            </div>
-
-            <!-- Service 1: Decoration -->
-            <div class="service-card">
-                <i class="fas fa-gift"></i>
-                <h3>Decoration</h3>
-                <p>Professionally designed decor at attractive prices to make your event visually stunning.</p>
-            </div>
-
-            <!-- Service 2: Photography & Videography -->
-            <div class="service-card">
-                <i class="fas fa-camera"></i>
-                <h3>Photography & Videography</h3>
-                <p>Expert teams for candid and traditional photography, and high-quality videography, capturing every special moment and reliving your event in style.</p>
-            </div>
-
-            <!-- Service 4: Makeup & Hairstyling -->
-            <div class="service-card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>Makeup & Hairstyling</h3>
-                <p>Talented makeup artists ensuring you look your best on your big day.</p>
-            </div>
-
-            <!-- Service 5: Mehendi & Haldi -->
-<div class="service-card">
-    <i class="fas fa-hand-sparkles"></i>
-    <h3>Mehendi & Haldi</h3>
-    <p>Experienced mehendi artists offering a wide range of intricate designs. 
-       Also, professional Haldi ceremony arrangements for a vibrant celebration.</p>
-</div>
-
-
-            <!-- Service 6: Catering -->
-            <div class="service-card">
-                <i class="fas fa-utensils"></i>
-                <h3>Catering</h3>
-                <p>Delicious menus covering all cuisines and price ranges for an unforgettable culinary experience.</p>
-            </div>
-
-            <!-- Service 7: Entertainment -->
-            <div class="service-card">
-                <i class="fas fa-music"></i>
-                <h3>Entertainment</h3>
-                <p>High-quality artists, from DJs to traditional performances, to keep your guests entertained.</p>
-            </div>
-
-            <!-- Service 8: Venue -->
-            <div class="service-card">
-                <i class="fas fa-building"></i>
-                <h3>Venue</h3>
-                <p>We help you find the perfect venue that matches your budget and style.</p>
-            </div>
-
-            <!-- Service 9: Invites -->
-            <div class="service-card">
-                <i class="fas fa-envelope"></i>
-                <h3>Invites</h3>
-                <p>Custom invitation designs that perfectly match your event’s theme.</p>
-            </div>
-
-            <!-- Service 3: Transportation -->
-            <div class="service-card">
-                <i class="fas fa-bus"></i>
-                <h3>Transportation</h3>
-                <p>Reliable and comfortable transportation options to ensure your guests arrive smoothly and on time.</p>
-            </div>
-        </div>
+ <!-- Services -->
+<section>
+  <h2>Our Wedding Services</h2>
+  <div class="destination-list">
+    
+    <div class="destination-card">
+      <img src="h:\kotirow video\decor.jpeg" alt="Decor">
+      <h3>Decoration</h3>
+      <p>Floral, thematic, traditional or modern – we create stunning and personalized setups for every ceremony.</p>
     </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\photography.jpeg" alt="Photography">
+      <h3>Photography</h3>
+      <p>Expert candid and cinematic photography to capture your timeless memories.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\makeup-hair stylar.jpeg" alt="Makeup">
+      <h3>Makeup & Styling</h3>
+      <p>Professional makeup and styling for bride, groom, and guests to look their best.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\mahendi artist.jpeg" alt="Mehendi">
+      <h3>Mehendi Artists</h3>
+      <p>Skilled mehendi artists for bridal and guest designs with intricate detailing.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\catering.jpeg" alt="Catering">
+      <h3>Catering</h3>
+      <p>Multi-cuisine menus, live counters, and elegant presentation for all functions.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\entertainment.jpeg" alt="Entertainment">
+      <h3>Entertainment</h3>
+      <p>DJs, live bands, folk dancers, celebrity performances, and more.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\venuemanagement.jpeg" alt="Venue">
+      <h3>Venue Management</h3>
+      <p>We help you choose and manage the perfect venue to match your theme and budget.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="h:\kotirow video\invitation.jpeg" alt="Invitations">
+      <h3>Invitations</h3>
+      <p>Custom-designed digital and printed invites to make a lasting impression.</p>
+    </div>
+
+  </div>
 </section>
 
-
-    
-
-    <!-- Packages Section -->
-    <section id="packages" class="packages">
-        <h2>Our Packages</h2>
-        <div class="package">
-            <a href="package-details.html?package=silver">
-                <img src="assets/Silver-Package-Graphics-Design.png" alt="Silver Package" class="package-img">
-                <div class="details">
-                    <h3>Silver Package</h3>
-                    <p class="price">Starting from INR 11,00,000</p>
-                    <p>Includes venue selection, accommodation, transportation, catering, event planning, entertainment, photography, videography, and decoration.</p>
-                </div>
-            </a>
-        </div>
-        <div class="package">
-            <a href="package-details.html?package=gold">
-                <img src="assets/Gold-Package.webp" alt="Gold Package" class="package-img">
-                <div class="details">
-                    <h3>Gold Package</h3>
-                    <p class="price">Starting from INR 17,00,000</p>
-                    <p>Includes enhanced services and luxurious options for your special day, ensuring a grand celebration.</p>
-                </div>
-            </a>
-        </div>
-        <div class="package">
-            <a href="package-details.html?package=premium">
-                <img src="assets/premium-package.png" alt="Royal Premium Package" class="package-img">
-                <div class="details">
-                    <h3>Royal Premium Package</h3>
-                    <p class="price">Starting from INR 25,00,000</p>
-                    <p>Experience unparalleled luxury with our Royal Premium Package. Includes all features of the Gold Package plus exclusive services such as bespoke decor, premium accommodation, and personalized event planning.</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2>Gallery</h2>
-        <p>Take a look at some of the beautiful moments we've created for our clients.</p>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla19.jpg" alt="Destination Wedding Shimla 19">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla21.jpg" alt="Destination Wedding Shimla 21">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla25.jpg" alt="Destination Wedding Shimla 25">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla28.jpg" alt="Destination Wedding Shimla 28">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla29.jpg" alt="Destination Wedding Shimla 29">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla33.jpg" alt="Destination Wedding Shimla 33">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla46.jpg" alt="Destination Wedding Shimla 46">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/mydream/destination_wedding_in_shimla47.jpg" alt="Destination Wedding Shimla 47">
-        </div>
-        <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla1.jpeg" alt="Corporate Event Shimla 1">
-      </div>
-      <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla2.jpeg" alt="Corporate Event Shimla 2">
-      </div>
-      <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla3.jpeg" alt="Corporate Event Shimla 3">
-      </div>
-      <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla4.jpeg" alt="Corporate Event Shimla 4">
-      </div>
-      <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla5.jpeg" alt="Corporate Event Shimla 5">
-      </div>
-      <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla6.jpeg" alt="Corporate Event Shimla 6">
-      </div>
-      <div class="gallery-item">
-          <img src="assets/mydream/my_deam_events_corporate_events_in_shimla7.jpeg" alt="Corporate Event Shimla 7">
-      </div>
-
-        </div>
-        <div class="see-more">
-            <a href="gallery.html" class="btn-see-more">See More &#8594;</a>
-        </div>
-    </div>
+<!-- CTA -->
+<section style="background-color: #fdf4f6; padding: 60px 20px; border-top: 3px solid #800020; border-bottom: 3px solid #800020;">
+  <div style="max-width: 800px; margin: auto; text-align: center;">
+    <h2 style="color: #800020; font-size: 36px; margin-bottom: 10px;">Ready to Begin Your Forever?</h2>
+    <p style="font-size: 18px; color: #444; margin-bottom: 30px;">
+      Let us turn your dream wedding into a magical reality amidst the serene hills of Shimla.
+    </p>
+    <a href="contact(2).html" class="btn" style="background-color: #800020; color: #fff; padding: 12px 28px; border-radius: 6px; font-size: 18px; text-decoration: none; transition: background 0.3s ease;">
+      Contact Us Now
+    </a>
+  </div>
 </section>
-<div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <div class="lightbox-content">
-        <img class="lightbox-img" src="" alt="Lightbox Image">
-        <img class="watermark" src="https://mydreamevent.in/assets/logo.jpeg" alt="My Dream Events Watermark">
+
+  <footer>
+    <div style="max-width: 1200px; margin: auto; padding: 20px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; text-align: left;">
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="color:#800020;">Contact Us</h3>
+          <p><strong>Destination Wedding in Shimla</strong></p>
+          <p>Shimla, Himachal Pradesh, India</p>
+          <p>Phone: <a href="tel:+918219559908" style="color:#800020; text-decoration: none;">+91-8219559908</a></p>
+          <p>Email: <a href="mailto:mydreameventsshimla@gmail.com" style="color:#800020; text-decoration: none;">mydreameventsshimla@gmail.com</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="color:#800020;">Quick Links</h3>
+          <p><a href="frontpage.html" style="color:#800020; text-decoration: none;">Home</a></p>
+          <p><a href="packages (2).html" style="color:#800020; text-decoration: none;">Packages</a></p>
+          <p><a href="gallery.html" style="color:#800020; text-decoration: none;">Gallery</a></p>
+          <p><a href="contact(2).html" style="color:#800020; text-decoration: none;">Contact Us</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="color:#800020;">Follow Us</h3>
+          <p><a href="#" style="color:#800020; text-decoration: none;">Instagram</a></p>
+          <p><a href="#" style="color: #800020; text-decoration: none;">Facebook</a></p>
+          <p><a href="#" style="color: #800020; text-decoration: none;">YouTube</a></p>
+        </div>
+      </div>
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;" />
+      <p style="text-align: center; color:#800020;">&copy; 2025 Destination Wedding in Shimla – All Rights Reserved</p>
     </div>
-</div>
+  </footer>
 
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>"My Dream Events made our wedding day truly magical. Everything was perfectly organized, and our guests were amazed by the attention to detail. Highly recommended!"</p>
-                    <div class="client">- Pallavi Sharma</div>
-                </div>
-                <div class="testimonial">
-                    <p>"From the venue selection to the catering, everything was flawless. Thank you for making our special day unforgettable!"</p>
-                    <div class="client">- Priya Verma</div>
-                </div>
-                <div class="testimonial">
-                    <p>"The team at My Dream Events exceeded our expectations. Their creativity and professionalism ensured a stress-free experience for us."</p>
-                    <div class="client">- Ankit Mehta</div>
-                </div>
-                <div class="testimonial">
-                    <p>"We couldn’t have asked for a better event planner. Every detail was meticulously handled, leaving us free to enjoy our day."</p>
-                    <div class="client">- Nisha Agarwal</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>We would love to hear from you! Whether you’re planning a wedding, corporate event, or any other special occasion, feel free to reach out to us.</p>
-            
-            <div class="contact-details">
-                <div class="contact-info">
-                    <h3>Our Contact Information</h3>
-                    <p><strong>Phone:</strong> <a href="tel:+918219559908">+91-8219559908</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:mydreameventsshimla@gmail.com">mydreameventsshimla@gmail.com</a></p>
-                    <p><strong>Address:</strong> My Dream Events,Jawahar Colony Sanjauli Shimla,171006 Himachal Pradesh, India</p>
-                </div>
-    
-                <form action="mailto:mydreameventsshimla@gmail.com" method="post" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section more">
-                    <h3>About My Dream Events</h3>
-                    <p>My Dream Events specializes in creating unforgettable wedding experiences in the scenic landscapes of Shimla, Manali, Dharamshala, and Kasauli. We offer a range of packages tailored to meet your unique needs and preferences.</p>
-                </div>
-                <div class="footer-section links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#silver">Silver Package</a></li>
-                        <li><a href="#gold">Gold Package</a></li>
-                        <li><a href="#premium">Royal Premium Package</a></li>
-                        <li><a href="#customize">Customize Package</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section contact">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> My Dream Events,Jawahar Colony Bhattakufar Sanjauli Shimla,171006 Himachal Pradesh, India</p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+918219559908">+91-8219559908</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:mydreameventsshimla@gmail.com">mydreameventsshimla@gmail.com</a></p>
-                </div>
-                
-                <div class="footer-section social">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/mydreameventsshimla?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="https://www.facebook.com/mydreameventsshimla?mibextid=LQQJ4d" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://www.instagram.com/my_dream_event_s?igsh=eHVpZG1rbjBlNHE3&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/company/my-dream-event/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 My Dream Events. All rights reserved.</p>
-                <p>Website by <a href="https://mydreamevent.in" target="_blank">My Dream Events</a></p>
-            </div>
-        </div>
-    </footer>
-    <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '907192991277162');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=907192991277162&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    <script>
-        // Function to open the lightbox with the clicked image
-        document.querySelectorAll('.gallery-item img').forEach(image => {
-            image.addEventListener('click', function() {
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.querySelector('.lightbox-img');
-                lightboxImg.src = this.src;
-                lightbox.style.display = 'flex';
-            });
-        });
-    
-        // Function to close the lightbox when the close button or outside the image is clicked
-        document.querySelector('.close').addEventListener('click', function() {
-            document.getElementById('lightbox').style.display = 'none';
-        });
-    
-        document.getElementById('lightbox').addEventListener('click', function(event) {
-            if (event.target === this) {
-                this.style.display = 'none';
-            }
-        });
-
-
-
-
-
-        type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Event",
-  "name": "Destination Wedding by My Dream Events",
-  "location": {
-    "@type": "Place",
-    "name": "Shimla",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Shimla",
-      "addressRegion": "HP",
-      "addressCountry": "IN"
-    }
-  },
-  "description": "My Dream Events specializes in creating unforgettable destination weddings and corporate events in Shimla, Manali, Dharamshala, and Kasauli.",
-  "startDate": "2024-08-09",
-  "endDate": "2024-08-09",
-  "eventAttendanceMode": "http://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "http://schema.org/EventScheduled",
-  "organizer": {
-    "@type": "Organization",
-    "name": "My Dream Events",
-    "url": "https://mydreamevent.in"
-  }
-}
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  // Hide all slides
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}  // Reset to first slide if at the end
-    slides[slideIndex-1].style.display = "block";  // Show the current slide
-    setTimeout(showSlides, 3000); // Change slide every 3 seconds
-}
-
-    </script>
-    
-    
 </body>
-
 </html>

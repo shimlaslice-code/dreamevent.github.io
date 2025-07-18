@@ -1,543 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | My Dream Events</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <style>
-        
-         /* Basic Reset */
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body Styles */
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-
-        
-        header {
-            color: #070000;
-            padding: 10px 0;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header .logo {
-            font-size: 2em;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: black;
-            font-size: 1.1em;
-            font-family: 'Dancing Script', cursive;
-        }
-        .hero {
-            background: url('assets/Shimlaloongwood.jpg') no-repeat center center/cover;
-
-            color: #0a0000;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .hero h1 {
-    color: #040404; /* Neon green */
-    font-size: 4em;
-    margin-bottom: 20px;
-    font-family: 'Great Vibes', cursive;
-    text-shadow: 
-        0 0 5px #f8faf8,  /* Glow effect */
-        0 0 10px #f9faf9, 
-        0 0 20px #fafbfa, 
-        0 0 40px #e6ebe6, 
-        0 0 80px #f6f7f6, 
-        0 0 90px #f6f9f6, 
-        0 0 100px #fdfefd, 
-        0 0 150px #fbfcfb;
-}
-
-
-        /* Footer Styles */
-        footer {
-    background-color: #f8f9fa;
-    padding: 40px 0;
-    text-align: center;
-    border-top: 2px solid #e9ecef;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 20px;
-    min-width: 250px;
-}
-
-.footer-section h3 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.footer-section p,
-.footer-section a,
-.footer-section ul {
-    color: #555;
-    text-decoration: none;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-    color: #4eda03;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-section ul li a:hover {
-    color: #333;
-}
-
-.footer-section .contact p,
-.footer-section .contact a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-section .contact p i,
-.footer-section .contact a i {
-    margin-right: 10px;
-}
-
-.footer-section .social ul {
-    display: flex;
-    justify-content: center;
-}
-
-.footer-section .social ul li {
-    margin: 0 10px;
-}
-
-.footer-section .social ul li a {
-    color: #ff4800;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.footer-section .social ul li a:hover {
-    color: #333;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-    color: #6c757d;
-}
-
-.footer-bottom a {
-    color: #ff4800;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    color: #333;
-}
-
-
-        .social-media {
-            margin-top: 10px;
-        }
-
-        .social-media a {
-            margin: 0 10px;
-            color: #ff4800;
-            text-decoration: none;
-        }
-
-        .social-media a:hover {
-            text-decoration: underline;
-        }
-
-        /* Additional styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .gallery {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            margin-top: 50px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff4800;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: #ff4800;
-            margin: 10px auto 30px;
-        }
-        /* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Destination Wedding in Shimla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #4b0000;
     }
 
-    header .logo {
-        margin-bottom: 20px;
+    header {
+      background-color: #800020;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+      list-style: none;
+      padding: 0;
+      margin: 15px 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      transition: 0.3s ease;
     }
 
-    .hero h1 {
-        font-size: 3em;
+    nav ul li a:hover, nav ul li a.active {
+      text-decoration: underline;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .footer-section {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        height: 200px;
+    h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #800020;
+      margin-bottom: 40px;
+      font-family: 'Dancing Script', cursive;
     }
 
-    .hero h1 {
-        font-size: 2em;
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
-    .gallery {
-        padding: 30px 0;
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(128, 0, 32, 0.1);
     }
 
-    .footer-content {
-        padding: 0 10px;
+    footer {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #800020;
+      margin-top: 50px;
     }
-
-    .section-title {
-        font-size: 20px;
-    }
-}
-    </style>
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="logo">My Dream Events</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Services</a></li>
-                    <li><a href="package-details.html">Packages</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="index.html#testimonials">Testimonials</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <li><a href="index.html#about">About</a></li>
+  <header>
+    <div class="logo">Destination Wedding in Shimla</div>
+    <nav>
+      <ul>
+        <li><a href="frontpage.html">Home</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="packages (2).html">Packages</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact(2).html">Contact</a></li>
+         <li> <a href="testimonials(2).html"> Testimonials</a></li>
+         <li><a href="aboutus(2).html" >About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Capturing Moments: Our Event Highlights</h1>
-            
-            
-        </div>
-    </section>
-
-
-    <!-- Destination Weddings Section -->
-<section id="destination-weddings" class="gallery">
-    <div class="container">
-        <h2 class="section-title">Destination Weddings</h2>
-        <p>Explore our stunning destination weddings in picturesque locations.</p>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla40.jpg" alt="Destination Wedding Shimla 40">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla41.jpg" alt="Destination Wedding Shimla 41">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla43.jpg" alt="Destination Wedding Shimla 43">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla45.jpg" alt="Destination Wedding Shimla 45">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla46.jpg" alt="Destination Wedding Shimla 46">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla47.jpg" alt="Destination Wedding Shimla 47">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla48.jpg" alt="Destination Wedding Shimla 48">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla49.jpg" alt="Destination Wedding Shimla 49">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla50.jpg" alt="Destination Wedding Shimla 50">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla51.jpg" alt="Destination Wedding Shimla 51">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla52.jpg" alt="Destination Wedding Shimla 52">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla53.jpg" alt="Destination Wedding Shimla 53">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla1.jpg" alt="Destination Wedding Shimla 1">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla2.jpg" alt="Destination Wedding Shimla 2">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla3.jpg" alt="Destination Wedding Shimla 3">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla4.jpg" alt="Destination Wedding Shimla 4">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla5.jpg" alt="Destination Wedding Shimla 5">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla6.jpg" alt="Destination Wedding Shimla 6">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla7.jpg" alt="Destination Wedding Shimla 7">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla8.jpg" alt="Destination Wedding Shimla 8">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla9.jpg" alt="Destination Wedding Shimla 9">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla10.jpg" alt="Destination Wedding Shimla 10">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla11.jpg" alt="Destination Wedding Shimla 11">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla12.jpg" alt="Destination Wedding Shimla 12">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla13.jpg" alt="Destination Wedding Shimla 13">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla14.jpg" alt="Destination Wedding Shimla 14">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla15.jpg" alt="Destination Wedding Shimla 15">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla16.jpg" alt="Destination Wedding Shimla 16">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla17.jpg" alt="Destination Wedding Shimla 17">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla19.jpg" alt="Destination Wedding Shimla 19">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla21.jpg" alt="Destination Wedding Shimla 21">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla25.jpg" alt="Destination Wedding Shimla 25">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla28.jpg" alt="Destination Wedding Shimla 28">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla29.jpg" alt="Destination Wedding Shimla 29">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla33.jpg" alt="Destination Wedding Shimla 33">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla35.jpg" alt="Destination Wedding Shimla 35">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla36.jpg" alt="Destination Wedding Shimla 36">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla37.jpg" alt="Destination Wedding Shimla 37">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla38.jpg" alt="Destination Wedding Shimla 38">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/destination_wedding_in_shimla39.jpg" alt="Destination Wedding Shimla 39">
-            </div>
-            
-        </div>
+  <section id="gallery">
+    <h2>Wedding Moments</h2>
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/400x300/?wedding,bride" alt="Bride">
+      <img src="https://source.unsplash.com/400x300/?wedding,venue" alt="Venue">
+      <img src="https://source.unsplash.com/400x300/?wedding,decor" alt="Decor">
+      <img src="https://source.unsplash.com/400x300/?wedding,ceremony" alt="Ceremony">
+      <img src="https://source.unsplash.com/400x300/?wedding,reception" alt="Reception">
+      <img src="https://source.unsplash.com/400x300/?wedding,flowers" alt="Flowers">
     </div>
-</section>
+  </section>
 
-<!-- Corporate Events Section -->
-<section id="corporate-events" class="gallery">
-    <div class="container">
-        <h2 class="section-title">Corporate Events</h2>
-        <p>See how we’ve made corporate events memorable with our exceptional services.</p>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla1.jpeg" alt="Corporate Event Shimla 1">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla2.jpeg" alt="Corporate Event Shimla 2">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla3.jpeg" alt="Corporate Event Shimla 3">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla4.jpeg" alt="Corporate Event Shimla 4">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla5.jpeg" alt="Corporate Event Shimla 5">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla6.jpeg" alt="Corporate Event Shimla 6">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla7.jpeg" alt="Corporate Event Shimla 7">
-            </div>
-            <div class="gallery-item">
-                <img src="assets/mydream/my_deam_events_corporate_events_in_shimla8.jpeg" alt="Corporate Event Shimla 8">
-            </div>
-        </div>
+<footer>
+  <div style="max-width: 1200px; margin: auto; padding: 20px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; text-align: left;">
+      
+      <!-- Contact Info -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="color:#800020;">Contact Us</h3>
+        <p><strong>Destination Wedding in Shimla</strong></p>
+        <p>Shimla, Himachal Pradesh, India</p>
+        <p>Phone: <a href="tel:+918219559908" style="color:#800020; text-decoration: none;">+91-8219559908</a></p>
+        <p>Email: <a href="mailto:mydreameventsshimla@gmail.com" style="color:#800020; text-decoration: none;">mydreameventsshimla@gmail.com</a></p>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="color: #800020;">Quick Links</h3>
+        <p><a href="frontpage.html" style="color:#800020; text-decoration: none;">Home</a></p>
+        <p><a href="packages (2).html" style="color:#800020; text-decoration: none;">Packages</a></p>
+        <p><a href="gallery.html" style="color:#800020; text-decoration: none;">Gallery</a></p>
+        <p><a href="contact(2).html" style="color:#800020; text-decoration: none;">Contact Us</a></p>
+      </div>
+
+      <!-- Social Media -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="color: #800020;">Follow Us</h3>
+        <p><a href="#" style="color:#800020; text-decoration: none;">Instagram</a></p>
+        <p><a href="#" style="color:#800020; text-decoration: none;">Facebook</a></p>
+        <p><a href="#" style="color:#800020; text-decoration: none;">YouTube</a></p>
+      </div>
+
     </div>
-</section>
 
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <h3>About My Dream Events</h3>
-                    <p>My Dream Events specializes in creating unforgettable wedding experiences in the scenic landscapes of Shimla, Manali, Dharamshala, and Kasauli. We offer a range of packages tailored to meet your unique needs and preferences.</p>
-                </div>
-                <div class="footer-section links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#silver">Silver Package</a></li>
-                        <li><a href="#gold">Gold Package</a></li>
-                        <li><a href="#platinum">Platinum Package</a></li>
-                        <li><a href="#premium">Royal Premium Package</a></li>
-                        <li><a href="#customize">Customize Package</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section contact">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> My Dream Events,Jawahar Colony Bhattakufar Sanjauli Shimla,171006 Himachal Pradesh, India</p>
-                    <p><i class="fas fa-phone"></i> +91-8219559908</p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:mydreameventsshimla@gmail.com">mydreameventsshimla@gmail.com</a></p>
-                </div>
-                <div class="footer-section social">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li><a href="https://facebook.com/mydreamevents" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/mydreamevents" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://instagram.com/mydreamevents" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://linkedin.com/company/mydreamevents" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 My Dream Events. All rights reserved.</p>
-                <p>Website by <a href="https://mydreamevent.in" target="_blank">My Dream Events</a></p>
-            </div>
-        </div>
-    </footer>
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;" />
+    <p style="text-align: center; color: #800020;">&copy; 2025 Destination Wedding in Shimla – All Rights Reserved</p>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Destination Wedding in Shimla</title>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:white;
+      --accent: #ffffff;
+      --text: #333333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--accent);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color:black;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 200px;
+}
+
+.logo-text {
+  font-family: 'Hello Paris', cursive;
+  font-size: 28px;
+  color: black;
+}
+
+
+   nav {
+  background-color: white; /* or your preferred color */
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff4081;
+  text-decoration: underline;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid white;
+  padding-bottom: 3px;
+}
+
+ nav a.active {
+  color: #e91e63 !important; /* Bright pink highlight */
+  border-bottom: 3px solid #e91e63;
+  padding-bottom: 2px;
+}
+
+/* Video container - white background with full screen video */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* Disables interaction with iframe */
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.overlay-content h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: #800020;
+  margin-bottom: 20px;
+}
+
+.overlay-content p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.overlay-content .btn {
+  padding: 12px 30px;
+  background-color: #800020;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.overlay-content .btn:hover {
+  color: #800020;
+  border: 2px solid #800020;
+}
+   /* Why Choose Us - Styling */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color:  #a8324b;
+  font-size: 32px;
+}
+
+.destination-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  border: #a8324b; 
+}
+
+.destination-card {
+  border:  #a8324b;
+  border-radius: 12px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.destination-card h3 {
+  margin: 15px 10px 10px;
+  font-size: 22px;
+  color: black(--primary);
+}
+
+.destination-card p {
+  padding: 0 15px 20px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px #a8324b;
+}
+
+
+    h4 {
+      color: var(--primary);
+      margin-top: 10px;
+    }
+    .btn:hover {
+  background-color: #a8324b;
+}
+
+
+    footer {
+      background: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<header style="background-color: white; padding: 20px 60px;">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+
+    <!-- LOGO LEFT -->
+    <a href="index.html" class="logo-link" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+      <img src="file:///H:/kotirow%20video/ChatGPT%20Image%20Jul%209,%202025,%2005_09_41%20PM%20(1).png" alt="Logo" class="logo-img" style="height: 150px;">
+      <div class="logo-text" style="font-family: 'Hello Paris', cursive; font-size: 42px; color: black;">
+      </div>
+    </a>
+
+    <!-- NAVIGATION RIGHT -->
+    <nav>
+      <ul style="list-style: none; display: flex; gap: 40px; margin: 0; padding: 0; color: #800020;" >
+       <li><a href="index.html" class="active" style="text-decoration: none; font-size: 20px; font-weight: 600;">Home</a></li>
+       <li><a href="destination.html" style="color: black; text-decoration: none; font-size: 20px; font-weight: 600;">Destinations</a></li>
+        <li><a href="packages (2).html" style="color: black; text-decoration: none; font-size: 20px; font-weight: 600;">Packages</a></li>
+        <li><a href="gallery.html" style="color: black; text-decoration: none; font-size: 20px; font-weight: 600;">Gallery</a></li>
+        <li><a href="contact(2).html" style="color:black; text-decoration: none; font-size: 20px; font-weight: 600;">Contact</a></li>
+        <li><a href="testimonials(2).html" style="color:black; text-decoration: none; font-size: 20px; font-weight: 600;">Testimonials</a></li>
+        <li><a href="aboutus(2).html" style="color:black; text-decoration: none; font-size: 20px; font-weight: 600;">About Us</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  
+</header>
+
+<!-- Video Background Container -->
+<div class="video-container" >
+  <iframe 
+    src="https://www.youtube.com/embed/FvMG9HRhJxA?autoplay=1&mute=1&controls=0&loop=1&playlist=FvMG9HRhJxA&modestbranding=1&rel=0&showinfo=0" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+
+  <!-- Overlay content without blur background -->
+  <div class="overlay-content">
+    <h1 style="font-size: 48px; font-family: 'Georgia', serif; color: #800020;">Plan Your Dream Wedding</h1>
+    <p style="font-size: 20px; color:#800020;">Celebrate love in the enchanting hills of Shimla</p>
+    <a href="getstart.html" class="btn" style="padding: 12px 30px; background: #800020; color:  #fff; text-decoration: none; border-radius: 30px; font-weight: bold;">Get Started</a>
+  </div>
+</div>
+
+
+ <!-- Why Choose Us -->
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="destination-list">
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/luxury.jpeg" alt="Luxury">
+      <h3>Luxury Experience</h3>
+      <p>We craft exclusive weddings with elegance and style, tailored to your dreams.</p>
+    </div>
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/expert%20planning.jpeg" alt="Planner">
+      <h3>Expert Planning</h3>
+      <p>From venue booking to decor and logistics, we manage everything professionally.</p>
+    </div>
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/personalized.jpeg" alt="Personal Touch">
+      <h3>Personalized Touch</h3>
+      <p>Every detail reflects your story – from Mehendi to Mandap.</p>
+    </div>
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/visual%20stunning.jpeg" alt="Photography">
+      <h3>Stunning Visuals</h3>
+      <p>Capture every magical moment with professional photography and cinematography.</p>
+    </div>
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/scenic%20venue.jpeg" alt="Venues">
+      <h3>Scenic Venues</h3>
+      <p>Choose from curated wedding venues nestled in the hills, valleys, and heritage properties.</p>
+    </div>
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/endtoendsupport.png" alt="Support">
+      <h3>End-to-End Support</h3>
+      <p>Our team stays with you through every step – from planning to execution and beyond.</p>
+    </div>
+  </div>
+</section>
+
+ <!-- Services -->
+<section>
+  <h2>Our Wedding Services</h2>
+  <div class="destination-list">
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/venuemanagement.jpeg" alt="Venue">
+      <h3>Venue Management</h3>
+      <p>We help you choose and manage the perfect venue to match your theme and budget.</p>
+    </div>
+    
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/decor.jpeg" alt="Decor">
+      <h3>Decoration</h3>
+      <p>Floral, thematic, traditional or modern – we create stunning and personalized setups for every ceremony.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/photography.jpeg" alt="Photography">
+      <h3>Photography</h3>
+      <p>Expert candid and cinematic photography to capture your timeless memories.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/makeup-hair%20stylar.jpeg" alt="Makeup">
+      <h3>Makeup & Styling</h3>
+      <p>Professional makeup and styling for bride, groom, and guests to look their best.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/mahendi%20artist.jpeg" alt="Mehendi">
+      <h3>Mehendi Artists</h3>
+      <p>Skilled mehendi artists for bridal and guest designs with intricate detailing.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/catering.jpeg" alt="Catering">
+      <h3>Catering</h3>
+      <p>Multi-cuisine menus, live counters, and elegant presentation for all functions.</p>
+    </div>
+
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/entertainment.jpeg" alt="Entertainment">
+      <h3>Entertainment</h3>
+      <p>DJs, live bands, folk dancers, celebrity performances, and more.</p>
+    </div>
+    <div class="destination-card">
+      <img src="file:///H:/.html%20fileof%20new%20web/frontpageimages/invitation.jpeg" alt="Invitations">
+      <h3>Invitations</h3>
+      <p>Custom-designed digital and printed invites to make a lasting impression.</p>
+    </div>
+
+  </div>
+</section>
+<!-- CTA -->
+<section style="background-color: #fdf4f6; padding: 60px 20px; border-top: 3px solid #800020; border-bottom: 3px solid #800020;">
+  <div style="max-width: 800px; margin: auto; text-align: center;">
+    <h2 style="color: #800020; font-size: 36px; margin-bottom: 10px;">Ready to Begin Your Forever?</h2>
+    <p style="font-size: 18px; color: #444; margin-bottom: 30px;">
+      Let us turn your dream wedding into a magical reality amidst the serene hills of Shimla.
+    </p>
+    <a href="contact(2).html" class="btn" style="background-color: #800020; color: #fff; padding: 12px 28px; border-radius: 6px; font-size: 18px; text-decoration: none; transition: background 0.3s ease;">
+      Contact Us Now
+    </a>
+  </div>
+</section>
+
+  <footer>
+    <div style="max-width: 1200px; margin: auto; padding: 20px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; text-align: left;">
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="color:#800020;">Contact Us</h3>
+          <p><strong>My Dream Events</strong></p>
+          <p>Shimla, Himachal Pradesh, India</p>
+          <p>Phone: <a href="tel:+918219559908" style="color:#800020; text-decoration: none;">+91-8219559908</a></p>
+          <p>Email: <a href="mailto:team@mydreamevent.in" style="color:#800020; text-decoration: none;">team@mydreamevent.in</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="color:#800020;">Quick Links</h3>
+          <p><a href="index.html" style="color:#800020; text-decoration: none;">Home</a></p>
+          <p><a href="packages (2).html" style="color:#800020; text-decoration: none;">Packages</a></p>
+          <p><a href="gallery.html" style="color:#800020; text-decoration: none;">Gallery</a></p>
+          <p><a href="contact(2).html" style="color:#800020; text-decoration: none;">Contact Us</a></p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="color:#800020;">Follow Us</h3>
+          <p><a href="#" style="color:#800020; text-decoration: none;">Instagram</a></p>
+          <p><a href="#" style="color: #800020; text-decoration: none;">Facebook</a></p>
+          <p><a href="#" style="color: #800020; text-decoration: none;">YouTube</a></p>
+        </div>
+      </div>
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;" />
+      <p style="text-align: center; color:#800020;">&copy; 2025 My Dream Events – All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

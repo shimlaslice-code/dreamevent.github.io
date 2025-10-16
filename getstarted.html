@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started - Destination Wedding in Shimla</title>
+  <style>
+    :root {
+      --primary: #800020;
+      --accent: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--accent);
+      color: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--accent);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Dancing Script', cursive;
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-bottom: 2px solid white;
+      padding-bottom: 3px;
+    }
+
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a83240;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Destination Wedding in Shimla</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li> <a href="testimonial.html"> Testimonials</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="destination">Preferred Destination:</label>
+      <select id="destination" name="destination">
+        <option value="">-- Select Destination --</option>
+        <option value="Shimla">Shimla</option>
+        <option value="Manali">Manali</option>
+        <option value="Udaipur">Udaipur</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Goa">Goa</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Rishikesh">Rishikesh</option>
+        <option value="Mussoorie">Mussoorie</option>
+        <option value="Jim Corbett">Jim Corbett</option>
+        <option value="Dharamshala">Dharamshala</option>
+        <option value="Kasauli">Kasauli</option>
+        <option value="Kashmir">Kashmir</option>
+        <option value="Lonavala">Lonavala</option>
+        <option value="Andaman & Nicobar">Andaman & Nicobar</option>
+      </select>
+
+
+     <label for="phone">Phone Number:</label>   
+      <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
+
+     <label for="date">Preferred Wedding Date:</label>
+      <input type="date" id="date" name="date" required>
+
+     <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="10" max="1000" required>
+
+     <label for="services">Type of Services:</label>
+      <select id="services" name="services" required>
+      <option value="">-- Select Service --</option>
+      <option value="Full Wedding Planning">Full Wedding Planning</option>
+      <option value="Venue Booking">Venue Booking</option>
+      <option value="Decoration Only">Decoration Only</option>
+      <option value="Photography & Videography">Photography & Videography</option>
+      <option value="Makeup & Styling">Makeup & Styling</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Catering">Catering</option>
+      <option value="Invites & Stationery">Invites & Stationery</option>
+      <option value="Custom Package">Custom Package</option>
+      </select>
+
+     <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us your preferences, venue ideas, themes, etc." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
